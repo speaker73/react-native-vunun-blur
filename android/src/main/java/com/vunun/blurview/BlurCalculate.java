@@ -32,7 +32,7 @@ public class BlurCalculate {
     private Allocation input;
     private Allocation output;
     private ScriptIntrinsicBlur script;
-    private float radius = 12.0f;
+    private float radius = 2.0f;
     int i = -1;
     private int action = 0;
     private static final float BITMAP_RATIO = 0.1f;
@@ -108,7 +108,7 @@ public class BlurCalculate {
             bitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
             mMatrix.setScale(BITMAP_RATIO, BITMAP_RATIO);
             //mMatrix.invert(mDrawMatrix);
-            mDrawMatrix.setScale(11.5f, 11.5f);
+            mDrawMatrix.setScale(10f, 10f);
         }
 
         float dx = -(Math.min(0, mView.getLeft()) + mRect.left);
